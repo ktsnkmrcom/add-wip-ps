@@ -9,7 +9,14 @@
 - 作業中と思われる不明なレイヤー、グループ、またはアートボードがある場合は作動しません
 - ファイルの保存や書き出しはしません
 
-*大切な制作データには直接作動させず、png、jpegなどの統合画像へのご利用をおすすめします。*
+### *大切な制作データには直接作動させず、png、jpegなどの統合画像へのご利用をおすすめします。*
+
+---
+
+![gh-1](https://user-images.githubusercontent.com/77219005/204752653-b7a12aeb-f7bc-434c-bce1-7c1022f324c5.png)
+![gh-2-3](https://user-images.githubusercontent.com/77219005/204752707-87d61f5f-5cde-4f16-95fd-d114777af494.png)
+![gh-4](https://user-images.githubusercontent.com/77219005/204752742-48941c23-11a8-45bf-8207-43d309a523b2.png)
+
 
 ---
 
