@@ -20,7 +20,7 @@
 
 ---
 
-動作確認：Photoshop 2023 macOS
+動作確認：Photoshop 2023 (macOS, Windows10)
 
 ---
 
