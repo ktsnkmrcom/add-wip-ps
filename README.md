@@ -4,16 +4,17 @@
 - お手元のフォントをランダムに選択し描画
 - ランダムに選択したフォントで３つの候補を描画
 - 作品サイズは問いません
-- ルーラーの単位、% では作動しません
 - 特殊なカラーモード（モノクロ２階調、インデックスカラー、マルチチャンネル）では作動しません
 - 作業中と思われる不明なレイヤー、グループ、またはアートボードがある場合は作動しません
 - ファイルの保存や書き出しはしません
 
-### *大切な制作データには直接作動させず、png、jpegなどの統合画像へのご利用をおすすめします。*
+### **大切な制作データには直接作動させず、png、jpegなどの統合画像へのご利用をおすすめします。**
 
 ---
 
-![gh-1](https://user-images.githubusercontent.com/77219005/204752653-b7a12aeb-f7bc-434c-bce1-7c1022f324c5.png)
+![gh-11](https://user-images.githubusercontent.com/77219005/205332263-f526bbc9-5054-4bfe-aac9-84da5f318a52.png)
+*ルーラーは％でも作動するようになりました*
+
 ![gh-2-3](https://user-images.githubusercontent.com/77219005/204752707-87d61f5f-5cde-4f16-95fd-d114777af494.png)
 ![gh-4](https://user-images.githubusercontent.com/77219005/204752742-48941c23-11a8-45bf-8207-43d309a523b2.png)
 
@@ -31,8 +32,17 @@
 Type: Photoshop Script  
 Name: Add Wip Ps  
 File Name: add-wip-ps.jsx  
-Version: 1.0  
+Version: 1.0.1  
 Release: 2022-11-27
+
+---
+
+## UPDATE
+
+- 2022-12-04  
+1.0.0 --> 1.0.1  ルーラーの単位％でも作動するように改良
+
+---
 
 ## How to use
 

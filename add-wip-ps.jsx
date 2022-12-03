@@ -2,7 +2,7 @@
 Type: Photoshop Script
 Name: Add Wip Ps
 File Name: add-wip-ps.jsx
-Version: 1.0.0
+Version: 1.0.1
 
 Copyright (C) 2022 Katsushi Nakamura
 
@@ -31,15 +31,23 @@ function addWipPs() {
   var typefacesNum = 3;
   // --------------
 
-  // ドキュメントの横幅と縦幅を求める
   var sampleDocument = app.activeDocument;
+
+  // ルーラーを取得
+  var saveRuler = preferences.rulerUnits;
+  // percentなら一旦pxに変更
+  if (saveRuler === Units.PERCENT) {
+    preferences.rulerUnits = Units.PIXELS;
+  }
+
+  // ドキュメントの横幅と縦幅を求める
   var docWidth = sampleDocument.width.as("px");
   var docHeight = sampleDocument.height.as("px");
 
   // ドキュメントの解像度を求める
   var docResolution = sampleDocument.resolution;
   // カラーモード
-  var docMode = sampleDocument.mode.toString();
+  var docMode = sampleDocument.mode;
   // レイヤーセット数
   var docLayersetsNum = sampleDocument.layerSets.length;
   // レイヤー数
@@ -61,23 +69,17 @@ function addWipPs() {
     }
   }
 
-  // 単位チェック用
-  var unitCheck = sampleDocument.height.toString();
-  var rulerCheck = unitCheck.match(/%/i);
-
   // カラーモード レイヤーセット数 レイヤー数 ルーラー単位チェック
-  if (docMode === "DocumentMode.BITMAP") {
+  if (docMode === DocumentMode.BITMAP) {
     alert("Unsupported color mode");
-  } else if (docMode === "DocumentMode.INDEXEDCOLOR") {
+  } else if (docMode === DocumentMode.INDEXEDCOLOR) {
     alert("Unsupported color mode");
-  } else if (docMode === "DocumentMode.MULTICHANNEL") {
+  } else if (docMode === DocumentMode.MULTICHANNEL) {
     alert("Unsupported color mode");
   } else if (docLayersetsNum >= 1) {
     alert("Artboards and groups are not supported");
   } else if (docLayersNum > 1) {
     alert("Has an unknown working layer");
-  } else if (rulerCheck) {
-    alert('Unsupported ruler "%"');
   } else {
     // CC以上を対象にする
     var psVer = app.version;
@@ -173,6 +175,9 @@ function addWipPs() {
       // 繰り返し判定
       var repeatFlag = ++repeatFlag;
     } while (repeatFlag < typefacesNum);
+
+    // ルーラーを改めて設定（もどす）
+    preferences.rulerUnits = saveRuler;
 
     alert("Success");
   }
