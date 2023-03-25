@@ -1,6 +1,6 @@
 # Photoshopスクリプト Add Wip Ps
 
-## Photoshop PlugIn版を開発中です。
+## Photoshop PlugIn版　まもなく公開です
 
 - Work in progress [ WIP ] の文字挿入を手軽に
 - お手元のフォントをランダムに選択し描画
