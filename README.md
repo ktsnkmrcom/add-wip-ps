@@ -2,6 +2,10 @@
 
 ## Photoshop PlugIn版　公開中！
 
+https://exchange.adobe.com/apps/cc/d9877416/wip-write-ww
+
+---
+
 - Work in progress [ WIP ] の文字挿入を手軽に
 - お手元のフォントをランダムに選択し描画
 - ランダムに選択したフォントで３つの候補を描画
